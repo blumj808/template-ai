@@ -9,11 +9,14 @@ class SheltersController < ApplicationController
 
   def show
     the_id = params.fetch("path_id")
-
+  
     matching_shelters = Shelter.where({ :id => the_id })
-
+  
     @the_shelter = matching_shelters.at(0)
-
+  
+    # Get all dogs associated with this shelter
+    @list_of_dogs = @the_shelter.dogs.order({ :created_at => :desc })
+  
     render({ :template => "shelters/show" })
   end
 

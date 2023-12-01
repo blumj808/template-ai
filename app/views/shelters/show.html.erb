@@ -41,13 +41,6 @@
       </dd>
 
       <dt>
-        Dog
-      </dt>
-      <dd>
-        <%= @the_shelter.dog_id %>
-      </dd>
-
-      <dt>
         Description
       </dt>
       <dd>
@@ -81,6 +74,17 @@
       <dd>
         <%= time_ago_in_words(@the_shelter.updated_at) %> ago
       </dd>
+
+      <div>
+  <h2>Dogs at this shelter</h2>
+  <ul>
+    <% @list_of_dogs.each do |dog| %>
+      <li>
+        <%= dog.name %>
+      </li>
+    <% end %>
+  </ul>
+</div>
     </dl>
   </div>
 </div>
