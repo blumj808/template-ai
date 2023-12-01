@@ -25,7 +25,7 @@ class SheltersController < ApplicationController
     the_shelter.name = params.fetch("query_name")
     the_shelter.city = params.fetch("query_city")
     the_shelter.state = params.fetch("query_state")
-    the_shelter.dog_id = params.fetch("query_dog_id")
+    #the_shelter.dog_id = params.fetch("query_dog_id")
     the_shelter.description = params.fetch("query_description")
     the_shelter.image = params.fetch("query_image")
     the_shelter.dogs_count = params.fetch("query_dogs_count")
