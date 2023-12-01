@@ -1,0 +1,166 @@
+<div>
+  <div>
+    <h1>
+      List of all owners
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new owner
+    </h2>
+
+    <form action="/insert_owner" method="post">
+      <div>
+        <label for="name_box">
+          Name
+        </label>
+
+        <input type="text" id="name_box" name="query_name">
+      </div>
+
+      <div>
+        <label for="pet_id_box">
+          Pet
+        </label>
+
+        <input type="text" id="pet_id_box" name="query_pet_id">
+      </div>
+
+      <div>
+        <label for="bio_box">
+          Bio
+        </label>
+
+        <input type="text" id="bio_box" name="query_bio">
+      </div>
+
+      <div>
+        <label for="age_box">
+          Age
+        </label>
+
+        <input type="text" id="age_box" name="query_age">
+      </div>
+
+      <div>
+        <label for="gender_box">
+          Gender
+        </label>
+
+        <input type="text" id="gender_box" name="query_gender">
+      </div>
+
+      <div>
+        <label for="dogs_count_box">
+          Dogs count
+        </label>
+
+        <input type="text" id="dogs_count_box" name="query_dogs_count">
+      </div>
+
+      <button>
+        Create owner
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Name
+        </th>
+
+        <th>
+          Pet
+        </th>
+
+        <th>
+          Bio
+        </th>
+
+        <th>
+          Age
+        </th>
+
+        <th>
+          Gender
+        </th>
+
+        <th>
+          Dogs count
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_owners.each do |an_owner| %>
+      <tr>
+        <td>
+          <%= an_owner.id %>
+        </td>
+
+        <td>
+          <%= an_owner.name %>
+        </td>
+
+        <td>
+          <%= an_owner.pet_id %>
+        </td>
+
+        <td>
+          <%= an_owner.bio %>
+        </td>
+
+        <td>
+          <%= an_owner.age %>
+        </td>
+
+        <td>
+          <%= an_owner.gender %>
+        </td>
+
+        <td>
+          <%= an_owner.dogs_count %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(an_owner.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(an_owner.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/owners/<%= an_owner.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

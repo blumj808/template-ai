@@ -1,0 +1,191 @@
+<div>
+  <div>
+    <h1>
+      Dog #<%= @the_dog.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/dogs">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_dog/<%= @the_dog.id %>">
+          Delete dog
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Name
+      </dt>
+      <dd>
+        <%= @the_dog.name %>
+      </dd>
+
+      <dt>
+        Breed
+      </dt>
+      <dd>
+        <%= @the_dog.breed %>
+      </dd>
+
+      <dt>
+        Age
+      </dt>
+      <dd>
+        <%= @the_dog.age %>
+      </dd>
+
+      <dt>
+        Bio
+      </dt>
+      <dd>
+        <%= @the_dog.bio %>
+      </dd>
+
+      <dt>
+        Shelter
+      </dt>
+      <dd>
+        <%= @the_dog.shelter_id %>
+      </dd>
+
+      <dt>
+        Gender
+      </dt>
+      <dd>
+        <%= @the_dog.gender %>
+      </dd>
+
+      <dt>
+        Owner
+      </dt>
+      <dd>
+        <%= @the_dog.owner_id %>
+      </dd>
+
+      <dt>
+        Picture
+      </dt>
+      <dd>
+        <%= @the_dog.picture %>
+      </dd>
+
+      <dt>
+        Status
+      </dt>
+      <dd>
+        <%= @the_dog.status %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_dog.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_dog.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit dog
+    </h2>
+
+    <form action="/modify_dog/<%= @the_dog.id %>"  method="post" >
+      <div>
+        <label for="name_box">
+          Name
+        </label>
+
+        <input type="text" id="name_box" name="query_name" value="<%= @the_dog.name %>">
+      </div>
+
+      <div>
+        <label for="breed_box">
+          Breed
+        </label>
+
+        <input type="text" id="breed_box" name="query_breed" value="<%= @the_dog.breed %>">
+      </div>
+
+      <div>
+        <label for="age_box">
+          Age
+        </label>
+
+        <input type="text" id="age_box" name="query_age" value="<%= @the_dog.age %>">
+      </div>
+
+      <div>
+        <label for="bio_box">
+          Bio
+        </label>
+
+        <input type="text" id="bio_box" name="query_bio" value="<%= @the_dog.bio %>">
+      </div>
+
+      <div>
+        <label for="shelter_id_box">
+          Shelter
+        </label>
+
+        <input type="text" id="shelter_id_box" name="query_shelter_id" value="<%= @the_dog.shelter_id %>">
+      </div>
+
+      <div>
+        <label for="gender_box">
+          Gender
+        </label>
+
+        <input type="text" id="gender_box" name="query_gender" value="<%= @the_dog.gender %>">
+      </div>
+
+      <div>
+        <label for="owner_id_box">
+          Owner
+        </label>
+
+        <input type="text" id="owner_id_box" name="query_owner_id" value="<%= @the_dog.owner_id %>">
+      </div>
+
+      <div>
+        <label for="picture_box">
+          Picture
+        </label>
+
+        <input type="text" id="picture_box" name="query_picture" value="<%= @the_dog.picture %>">
+      </div>
+
+      <div>
+        <label for="status_box">
+          Status
+        </label>
+
+        <input type="text" id="status_box" name="query_status" value="<%= @the_dog.status %>">
+      </div>
+
+      <button>
+        Update dog
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

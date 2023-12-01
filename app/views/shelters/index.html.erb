@@ -1,0 +1,182 @@
+<div>
+  <div>
+    <h1>
+      List of all shelters
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new shelter
+    </h2>
+
+    <form action="/insert_shelter" method="post">
+      <div>
+        <label for="name_box">
+          Name
+        </label>
+
+        <input type="text" id="name_box" name="query_name">
+      </div>
+
+      <div>
+        <label for="city_box">
+          City
+        </label>
+
+        <input type="text" id="city_box" name="query_city">
+      </div>
+
+      <div>
+        <label for="state_box">
+          State
+        </label>
+
+        <input type="text" id="state_box" name="query_state">
+      </div>
+
+      <div>
+        <label for="dog_id_box">
+          Dog
+        </label>
+
+        <input type="text" id="dog_id_box" name="query_dog_id">
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <input type="text" id="description_box" name="query_description">
+      </div>
+
+      <div>
+        <label for="image_box">
+          Image
+        </label>
+
+        <input type="text" id="image_box" name="query_image">
+      </div>
+
+      <div>
+        <label for="dogs_count_box">
+          Dogs count
+        </label>
+
+        <input type="text" id="dogs_count_box" name="query_dogs_count">
+      </div>
+
+      <button>
+        Create shelter
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Name
+        </th>
+
+        <th>
+          City
+        </th>
+
+        <th>
+          State
+        </th>
+
+        <th>
+          Dog
+        </th>
+
+        <th>
+          Description
+        </th>
+
+        <th>
+          Image
+        </th>
+
+        <th>
+          Dogs count
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_shelters.each do |a_shelter| %>
+      <tr>
+        <td>
+          <%= a_shelter.id %>
+        </td>
+
+        <td>
+          <%= a_shelter.name %>
+        </td>
+
+        <td>
+          <%= a_shelter.city %>
+        </td>
+
+        <td>
+          <%= a_shelter.state %>
+        </td>
+
+        <td>
+          <%= a_shelter.dog_id %>
+        </td>
+
+        <td>
+          <%= a_shelter.description %>
+        </td>
+
+        <td>
+          <%= a_shelter.image %>
+        </td>
+
+        <td>
+          <%= a_shelter.dogs_count %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_shelter.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_shelter.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/shelters/<%= a_shelter.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

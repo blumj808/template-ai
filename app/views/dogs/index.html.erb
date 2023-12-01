@@ -1,0 +1,214 @@
+<div>
+  <div>
+    <h1>
+      List of all dogs
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new dog
+    </h2>
+
+    <form action="/insert_dog" method="post">
+      <div>
+        <label for="name_box">
+          Name
+        </label>
+
+        <input type="text" id="name_box" name="query_name">
+      </div>
+
+      <div>
+        <label for="breed_box">
+          Breed
+        </label>
+
+        <input type="text" id="breed_box" name="query_breed">
+      </div>
+
+      <div>
+        <label for="age_box">
+          Age
+        </label>
+
+        <input type="text" id="age_box" name="query_age">
+      </div>
+
+      <div>
+        <label for="bio_box">
+          Bio
+        </label>
+
+        <input type="text" id="bio_box" name="query_bio">
+      </div>
+
+      <div>
+        <label for="shelter_id_box">
+          Shelter
+        </label>
+
+        <input type="text" id="shelter_id_box" name="query_shelter_id">
+      </div>
+
+      <div>
+        <label for="gender_box">
+          Gender
+        </label>
+
+        <input type="text" id="gender_box" name="query_gender">
+      </div>
+
+      <div>
+        <label for="owner_id_box">
+          Owner
+        </label>
+
+        <input type="text" id="owner_id_box" name="query_owner_id">
+      </div>
+
+      <div>
+        <label for="picture_box">
+          Picture
+        </label>
+
+        <input type="text" id="picture_box" name="query_picture">
+      </div>
+
+      <div>
+        <label for="status_box">
+          Status
+        </label>
+
+        <input type="text" id="status_box" name="query_status">
+      </div>
+
+      <button>
+        Create dog
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Name
+        </th>
+
+        <th>
+          Breed
+        </th>
+
+        <th>
+          Age
+        </th>
+
+        <th>
+          Bio
+        </th>
+
+        <th>
+          Shelter
+        </th>
+
+        <th>
+          Gender
+        </th>
+
+        <th>
+          Owner
+        </th>
+
+        <th>
+          Picture
+        </th>
+
+        <th>
+          Status
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_dogs.each do |a_dog| %>
+      <tr>
+        <td>
+          <%= a_dog.id %>
+        </td>
+
+        <td>
+          <%= a_dog.name %>
+        </td>
+
+        <td>
+          <%= a_dog.breed %>
+        </td>
+
+        <td>
+          <%= a_dog.age %>
+        </td>
+
+        <td>
+          <%= a_dog.bio %>
+        </td>
+
+        <td>
+          <%= a_dog.shelter_id %>
+        </td>
+
+        <td>
+          <%= a_dog.gender %>
+        </td>
+
+        <td>
+          <%= a_dog.owner_id %>
+        </td>
+
+        <td>
+          <%= a_dog.picture %>
+        </td>
+
+        <td>
+          <%= a_dog.status %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_dog.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_dog.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/dogs/<%= a_dog.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

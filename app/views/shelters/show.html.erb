@@ -1,0 +1,161 @@
+<div>
+  <div>
+    <h1>
+      Shelter #<%= @the_shelter.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/shelters">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_shelter/<%= @the_shelter.id %>">
+          Delete shelter
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Name
+      </dt>
+      <dd>
+        <%= @the_shelter.name %>
+      </dd>
+
+      <dt>
+        City
+      </dt>
+      <dd>
+        <%= @the_shelter.city %>
+      </dd>
+
+      <dt>
+        State
+      </dt>
+      <dd>
+        <%= @the_shelter.state %>
+      </dd>
+
+      <dt>
+        Dog
+      </dt>
+      <dd>
+        <%= @the_shelter.dog_id %>
+      </dd>
+
+      <dt>
+        Description
+      </dt>
+      <dd>
+        <%= @the_shelter.description %>
+      </dd>
+
+      <dt>
+        Image
+      </dt>
+      <dd>
+        <%= @the_shelter.image %>
+      </dd>
+
+      <dt>
+        Dogs count
+      </dt>
+      <dd>
+        <%= @the_shelter.dogs_count %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_shelter.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_shelter.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit shelter
+    </h2>
+
+    <form action="/modify_shelter/<%= @the_shelter.id %>"  method="post" >
+      <div>
+        <label for="name_box">
+          Name
+        </label>
+
+        <input type="text" id="name_box" name="query_name" value="<%= @the_shelter.name %>">
+      </div>
+
+      <div>
+        <label for="city_box">
+          City
+        </label>
+
+        <input type="text" id="city_box" name="query_city" value="<%= @the_shelter.city %>">
+      </div>
+
+      <div>
+        <label for="state_box">
+          State
+        </label>
+
+        <input type="text" id="state_box" name="query_state" value="<%= @the_shelter.state %>">
+      </div>
+
+      <div>
+        <label for="dog_id_box">
+          Dog
+        </label>
+
+        <input type="text" id="dog_id_box" name="query_dog_id" value="<%= @the_shelter.dog_id %>">
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <input type="text" id="description_box" name="query_description" value="<%= @the_shelter.description %>">
+      </div>
+
+      <div>
+        <label for="image_box">
+          Image
+        </label>
+
+        <input type="text" id="image_box" name="query_image" value="<%= @the_shelter.image %>">
+      </div>
+
+      <div>
+        <label for="dogs_count_box">
+          Dogs count
+        </label>
+
+        <input type="text" id="dogs_count_box" name="query_dogs_count" value="<%= @the_shelter.dogs_count %>">
+      </div>
+
+      <button>
+        Update shelter
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
