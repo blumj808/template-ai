@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get("/", { :controller => "home", :action => "home" })
+
   # Routes for the Owner resource:
 
   # CREATE
