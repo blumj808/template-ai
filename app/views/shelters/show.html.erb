@@ -80,7 +80,8 @@
   <ul>
     <% @list_of_dogs.each do |dog| %>
       <li>
-        <%= dog.name %>
+         <a href="/dogs/<%= dog.id %>">
+         <%= dog.name %>
       </li>
     <% end %>
   </ul>
