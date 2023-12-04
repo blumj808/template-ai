@@ -3,6 +3,7 @@
     <h1>
       List of all shelters
     </h1>
+
   </div>
 </div>
 
@@ -75,10 +76,7 @@
   <div>
     <table border="1">
       <tr>
-        <th>
-          ID
-        </th>
-
+    
         <th>
           Name
         </th>
@@ -102,25 +100,12 @@
         <th>
           Dogs count
         </th>
-
-        <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
-        <th>
-        </th>
+      
       </tr>
 
       <% @list_of_shelters.each do |a_shelter| %>
       <tr>
-        <td>
-          <%= a_shelter.id %>
-        </td>
-
+       
         <td>
           <%= a_shelter.name %>
         </td>
@@ -138,18 +123,11 @@
         </td>
 
         <td>
-          <%= a_shelter.image %>
+          <img src="/images/<%= ERB::Util.url_encode(a_shelter.image) %>">
         </td>
 
         <td>
           <%= a_shelter.dogs_count %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_shelter.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_shelter.updated_at) %> ago
         </td>
 
         <td>

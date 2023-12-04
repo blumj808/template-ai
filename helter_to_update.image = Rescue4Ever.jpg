@@ -1,0 +1,12 @@
+=> [32m#<Shelter:0x00007f09864607f8[0m
+ id: [1;34m1[0m,
+ name: [31m[1;31m"[0m[31mRescue4Ever[1;31m"[0m[31m[0m,
+ city: [31m[1;31m"[0m[31mLos Angeles[1;31m"[0m[31m[0m,
+ state: [31m[1;31m"[0m[31mCA[1;31m"[0m[31m[0m,
+ dog_id: [1;36mnil[0m,
+ description:
+  [31m[1;31m"[0m[31mOperating since 1985, Rescue4Ever is a non-profit based in Southern California with a staff of over 20. [1;31m"[0m[31m[0m,
+ image: [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+ dogs_count: [1;34m1[0m,
+ created_at: [1;34;4mFri[0m, [1;34m01[0m [1;34;4mDec[0m [1;34m2023[0m [1;34m14[0m:[1;34m08[0m:[1;35m37.437150000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+ updated_at: [1;34;4mFri[0m, [1;34m01[0m [1;34;4mDec[0m [1;34m2023[0m [1;34m14[0m:[1;34m08[0m:[1;35m37.437150000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m
