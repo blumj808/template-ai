@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'dogs#sentence'
+
   get("/", { :controller => "home", :action => "home" })
 
   # Routes for the Owner resource:
@@ -30,6 +32,8 @@ Rails.application.routes.draw do
   get("/dogs", { :controller => "dogs", :action => "index" })
   
   get("/dogs/:path_id", { :controller => "dogs", :action => "show" })
+
+  get("/dogs/:path_id", { :controller => "dogs", :action => "sentence" })
   
   # UPDATE
   

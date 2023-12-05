@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      Shelter #<%= @the_shelter.id %> details
+      <%= @the_shelter.name %>'s Info
     </h1>
 
     <div>
@@ -51,7 +51,7 @@
         Image
       </dt>
       <dd>
-        <%= @the_shelter.image %>
+       <img src="/images/<%= ERB::Util.url_encode(@the_shelter.image) %>">
       </dd>
 
       <dt>
