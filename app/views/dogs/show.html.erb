@@ -4,6 +4,10 @@
       <%= @the_dog.name %>'s Info
     </h1>
 
+  <dd>
+       <img src="/images/<%= @the_dog.name.gsub(' ', '_') %>.jpg" alt="<%= @the_dog.name %>">
+      </dd>
+
     <div>
       <div>
         <a href="/dogs">
@@ -68,12 +72,7 @@
         <%= @the_dog.owner_id %>
       </dd>
 
-      <dt>
-        Picture
-      </dt>
-      <dd>
-       <img src="/images/<%= @the_dog.name.gsub(' ', '_') %>.jpg" alt="<%= @the_dog.name %>">
-      </dd>
+    
 
       <dt>
         Status
