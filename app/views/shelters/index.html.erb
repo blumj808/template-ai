@@ -107,7 +107,9 @@
       <tr>
        
         <td>
-          <%= a_shelter.name %>
+          <a href="/shelters/<%= a_shelter.id %>">
+           <%= a_shelter.name %>
+          </a>
         </td>
 
         <td>
@@ -128,12 +130,6 @@
 
         <td>
           <%= a_shelter.dogs_count %>
-        </td>
-
-        <td>
-          <a href="/shelters/<%= a_shelter.id %>">
-            Show details
-          </a>
         </td>
       </tr>
       <% end %>
