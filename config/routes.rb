@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  root 'dogs#sentence'
-
   get("/", { :controller => "home", :action => "home" })
 
   # Routes for the Owner resource:
