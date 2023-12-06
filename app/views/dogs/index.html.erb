@@ -18,12 +18,13 @@
       </div>
 
   <% @list_of_dogs.each do |dog| %>
-      <div>
-         <a href="/dogs/<%= dog.id %>">
-         <h2><%= dog.name %></h2>
-        <img src="/images/<%= dog.name.gsub(' ', '_') %>.jpg" alt="<%= dog.name %>">
-      </div>
-    <% end %>
+  <div>
+    <a href="/dogs/<%= dog.id %>">
+      <h2><%= dog.name %></h2>
+    </a>
+    <img src="/images/<%= dog.name.gsub(' ', '_') %>.jpg" alt="<%= dog.name %>">
+  </div>
+<% end %>
 
   </div>
 </div>
