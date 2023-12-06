@@ -1,27 +1,16 @@
-<div>
   <div>
-    <h1>
-      <%= @the_dog.name %>'s Info
-    </h1>
-
-  <dd>
-       <img src="/images/<%= @the_dog.name.gsub(' ', '_') %>.jpg" alt="<%= @the_dog.name %>">
-      </dd>
-
-    <div>
-      <div>
         <a href="/dogs">
           List of All Dogs
         </a>
       </div>
-
+<br>
       <div>
       <div>
         <a href="/shelters">
           Go back to Shelters
         </a>
       </div>
-
+<br>
       <div>
         <a href="/delete_dog/<%= @the_dog.id %>">
           Delete dog
@@ -29,14 +18,21 @@
       </div>
     </div>
 
-    <dl>
-      <dt>
-        Name
-      </dt>
-      <dd>
-        <%= @the_dog.name %>
+<div>
+  <div>
+    <h1>
+      About <%= @the_dog.name %>
+    </h1>
+
+  <dd>
+       <img src="/images/<%= @the_dog.name.gsub(' ', '_') %>.jpg" alt="<%= @the_dog.name %>">
       </dd>
 
+    <div>
+    
+
+    <dl>
+     
       <dt>
         Breed
       </dt>
@@ -62,7 +58,7 @@
         Shelter
       </dt>
       <dd>
-        <%= @the_dog.shelter_id %>
+       <%= @the_shelter.name %>
       </dd>
 
       <dt>
@@ -71,15 +67,6 @@
       <dd>
         <%= @the_dog.gender %>
       </dd>
-
-      <dt>
-        Owner
-      </dt>
-      <dd>
-        <%= @the_dog.owner_id %>
-      </dd>
-
-    
 
       <dt>
         Status

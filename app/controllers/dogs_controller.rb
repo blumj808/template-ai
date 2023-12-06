@@ -15,6 +15,9 @@ class DogsController < ApplicationController
 
     @the_dog = matching_dogs.at(0)
 
+    matching_shelters = Shelter.where({ :id => @the_dog.shelter_id })
+    @the_shelter = matching_shelters.at(0)
+
     render({ :template => "dogs/show" })
   end
 
