@@ -23,7 +23,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%; /* Adjust the width as necessary */
+  width: 50%; /* Adjust the width as necessary */
 }
 
 table {
@@ -74,4 +74,52 @@ button {
 
 button:hover {
   background-color: #45a049; /* Darken the button color on hover */
+}
+
+
+
+/* Style for the list containing the dogs */
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+li {
+  text-align: center; /* Center align the content of the list item */
+  font-size: 24px; /* Increase the font size */
+  margin-bottom: 20px; /* Add space below each list item */
+}
+
+li img {
+  display: block; /* Ensure the image is on a new line */
+  margin: 10px auto; /* Center the image horizontally and add space above and below */
+  max-width: 100%; /* Make sure the image is responsive and doesn't overflow */
+}
+
+a {
+  text-decoration: none; /* Optional: Remove the underline from links */
+  color: #000; /* Optional: Set a color for the text links */
+}
+
+/* Add a hover effect for the links for better user experience */
+a:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+
+* Style for the div that contains each dog information */
+.dog-listing {
+  text-align: center !important; /* Center align the content */
+  margin-bottom: 20px; /* Add space below each dog listing */
+}
+
+.dog-listing h2 {
+  margin: 0; /* Remove the default margin */
+  /* You can add more styling here such as font-size, color, etc. */
+}
+
+.dog-listing img {
+  display: block; /* Ensure the image is on a new line */
+  margin: 10px auto; /* Center the image horizontally and add space above and below */
+  max-width: 100%; /* Make sure the image is responsive and doesn't overflow */
 }

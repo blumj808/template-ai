@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="/styles.css">
+
 <div>
   <div>
     <h1>
@@ -10,7 +12,7 @@
           Go back
         </a>
       </div>
-
+<br>
       <div>
         <a href="/delete_shelter/<%= @the_shelter.id %>">
           Delete shelter
@@ -47,9 +49,7 @@
         <%= @the_shelter.description %>
       </dd>
 
-      <dt>
-        Image
-      </dt>
+
       <dd>
        <img src="/images/<%= ERB::Util.url_encode(@the_shelter.image) %>">
       </dd>
@@ -82,6 +82,7 @@
       <li>
          <a href="/dogs/<%= dog.id %>">
          <%= dog.name %>
+            <img src="/images/<%= dog.name.gsub(' ', '_') %>.jpg" alt="<%= dog.name %>">
       </li>
     <% end %>
   </ul>

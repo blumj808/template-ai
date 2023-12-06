@@ -1,3 +1,5 @@
+ <link rel="stylesheet" type="text/css" href="/styles.css">
+ 
  <div>
         <a href="/">
           Return to Homepage
@@ -19,8 +21,9 @@
 
     
 
-  <% @list_of_dogs.each do |dog| %>
-  <div>
+ <% @list_of_dogs.each do |dog| %>
+  <!-- Add the class 'dog-listing' to each dog's div -->
+  <div class="dog-listing">
     <a href="/dogs/<%= dog.id %>">
       <h2><%= dog.name %></h2>
     </a>
