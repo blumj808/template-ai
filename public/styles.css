@@ -1,0 +1,27 @@
+body {
+  background-color: #f0f0f0; /* Change the color to your preference */
+  font-family: Arial, sans-serif; /* This is a basic font, you can choose any you like */
+}
+
+h1 {
+  color: #333333; /* A dark gray color for your heading */
+  text-align: center; /* Center align the text */
+}
+
+/* Additional styling for your links */
+a {
+  color: #1a53ff; /* A nice blue color for links */
+  text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Adds underline on hover for better user experience */
+}
+
+/* Styling for the image */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Adjust the width as necessary */
+}
