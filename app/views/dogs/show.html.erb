@@ -147,6 +147,7 @@
 
 
 <div>
+<% if current_user && current_user.role == "admin" %>
   <div>
     <h2>
       Edit dog
@@ -231,5 +232,5 @@
     </form>
   </div>
 </div>
-
+<% end %>
 <hr>
