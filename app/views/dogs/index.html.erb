@@ -23,7 +23,7 @@
 
  <% @list_of_dogs.each do |dog| %>
   <!-- Add the class 'dog-listing' to each dog's div -->
-  <div class="dog-listing">
+  <div class="dog-listing" style="text-align: center;">
     <a href="/dogs/<%= dog.id %>">
       <h2><%= dog.name %></h2>
     </a>
