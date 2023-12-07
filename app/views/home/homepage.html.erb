@@ -34,13 +34,13 @@ Connecting you to shelters with animals in need
 
 <% if session.key?('user_id') %>
   <!-- Display this content only if the user is logged in -->
-  <a href="/shelters">Participating Shelters</a>
-  <br> 
-  <br> 
-  <a href="/dogs">Available Dogs</a> 
-  <br>
-  <br>
-  <a href="/logout">Logout</a>
+  <div style="text-align: center;">
+    <a href="/shelters">Participating Shelters</a>
+    <br><br>
+    <a href="/dogs">Available Dogs</a>
+    <br><br>
+    <a href="/logout">Logout</a>
+  </div>
 <% else %>
   <!-- Display the login form if the user is not logged in -->
 
