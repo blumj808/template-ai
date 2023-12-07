@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   # Routes for the Owner resource:
 
+  post("/login", { :controller => "sessions", :action => "create" })
+
+  get("/logout", { :controller => "sessions", :action => "destroy" })
+
   # CREATE
   post("/insert_owner", { :controller => "owners", :action => "create" })
           
