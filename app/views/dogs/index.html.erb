@@ -37,6 +37,7 @@
 <hr>
 
 <div>
+<% if current_user && current_user.role == "admin" %>
   <div>
      <h2 style="text-align: center;">
       Add a new dog
@@ -122,4 +123,5 @@
       
     </form>
   </div>
+  <% end %>
 </div>
