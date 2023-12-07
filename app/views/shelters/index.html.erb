@@ -85,8 +85,9 @@
 
 
 <div>
+<% if current_user && current_user.role == "admin" %>
   <div>
-    <h2>
+    <h2 style="text-align: center;">
       Add a new shelter
     </h2>
 
@@ -145,3 +146,4 @@
     </form>
   </div>
 </div>
+<% end %>
