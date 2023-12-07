@@ -27,7 +27,8 @@
     <a href="/dogs/<%= dog.id %>">
       <h2><%= dog.name %></h2>
     </a>
-    <img src="/images/<%= dog.name.gsub(' ', '_') %>.jpg" alt="<%= dog.name %>">
+    <img src="/images/<%= dog.name.gsub(' ', '_') %>.jpg" alt="<%= dog.name %>"style="width: 300px; height: auto;"
+>
   </div>
 <% end %>
 
