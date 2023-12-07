@@ -14,10 +14,12 @@
       </div>
 <br>
       <div>
+      <% if current_user && current_user.role == "admin" %>
         <a href="/delete_dog/<%= @the_dog.id %>">
           Delete dog
         </a>
       </div>
+      <% end %>
     </div>
 
 <div>
