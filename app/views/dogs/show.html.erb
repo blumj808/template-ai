@@ -147,6 +147,19 @@
         newRow.appendChild(newCell);
       });
 
+       // Add a cell with the Delete button
+      var deleteCell = document.createElement('td');
+      var deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.onclick = function() {
+        // This function will be called when the Delete button is clicked
+        if (confirm('Are you sure you want to delete this submission?')) {
+          newRow.remove();
+        }
+      };
+      deleteCell.appendChild(deleteButton);
+      newRow.appendChild(deleteCell);
+
       tableBody.appendChild(newRow);
 
       document.getElementById('adoption-form-container').style.display = 'none';
@@ -180,6 +193,7 @@
         <th>Phone Number</th>
         <th>Candidate Reason</th>
         <th>Contact Preferences</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
