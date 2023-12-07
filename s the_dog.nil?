@@ -1,0 +1,13 @@
+=> [32m#<Dog:0x00007f1e37bf2fa0[0m
+ id: [1;34m10[0m,
+ name: [31m[1;31m"[0m[31mApollo[1;31m"[0m[31m[0m,
+ breed: [31m[1;31m"[0m[31mCanadian Eskimo Dog[1;31m"[0m[31m[0m,
+ age: [1;34m8[0m,
+ bio: [31m[1;31m"[0m[31m loving and active and is a great watchdog, also is great at catching frisbees.[1;31m"[0m[31m[0m,
+ shelter_id: [1;36mnil[0m,
+ gender: [31m[1;31m"[0m[31mMale[1;31m"[0m[31m[0m,
+ owner_id: [1;36mnil[0m,
+ picture: [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+ status: [31m[1;31m"[0m[31mShelter[1;31m"[0m[31m[0m,
+ created_at: [1;34;4mTue[0m, [1;34m05[0m [1;34;4mDec[0m [1;34m2023[0m [1;34m01[0m:[1;34m57[0m:[1;35m55.494746000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+ updated_at: [1;34;4mTue[0m, [1;34m05[0m [1;34;4mDec[0m [1;34m2023[0m [1;34m01[0m:[1;34m57[0m:[1;35m55.494746000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m
