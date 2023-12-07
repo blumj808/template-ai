@@ -20,7 +20,6 @@
     </h1>
 
     
-
  <% @list_of_dogs.each do |dog| %>
   <!-- Add the class 'dog-listing' to each dog's div -->
   <div class="dog-listing" style="text-align: center;">
@@ -39,12 +38,12 @@
 
 <div>
   <div>
-    <h2>
+     <h2 style="text-align: center;">
       Add a new dog
     </h2>
 
     <form action="/insert_dog" method="post">
-      <div>
+      <div style="text-align: center;">
         <label for="name_box">
           Name
         </label>
@@ -52,7 +51,7 @@
         <input type="text" id="name_box" name="name">
       </div>
 
-      <div>
+    <div style="text-align: center;">
         <label for="breed_box">
           Breed
         </label>
@@ -60,7 +59,7 @@
         <input type="text" id="breed_box" name="breed">
       </div>
 
-      <div>
+      <div style="text-align: center;">
         <label for="age_box">
           Age
         </label>
@@ -68,7 +67,7 @@
         <input type="text" id="age_box" name="age">
       </div>
 
-      <div>
+     <div style="text-align: center;">
         <label for="bio_box">
           Bio
         </label>
@@ -76,7 +75,7 @@
         <input type="text" id="bio_box" name="bio">
       </div>
 
-      <div>
+     <div style="text-align: center;">
         <label for="shelter_id_box">
           Shelter
         </label>
@@ -84,7 +83,7 @@
         <input type="text" id="shelter_id_box" name="shelter_id">
       </div>
 
-      <div>
+     <div style="text-align: center;">
         <label for="gender_box">
           Gender
         </label>
@@ -92,7 +91,7 @@
         <input type="text" id="gender_box" name="gender">
       </div>
 
-      <div>
+      <div style="text-align: center;">
         <label for="owner_id_box">
           Owner
         </label>
@@ -100,7 +99,7 @@
         <input type="text" id="owner_id_box" name="owner_id">
       </div>
 
-      <div>
+     <div style="text-align: center;">
         <label for="picture_box">
           Picture
         </label>
@@ -108,7 +107,7 @@
         <input type="text" id="picture_box" name="picture">
       </div>
 
-      <div>
+      <div style="text-align: center;">
         <label for="status_box">
           Status
         </label>
@@ -116,9 +115,11 @@
         <input type="text" id="status_box" name="status">
       </div>
 
-      <button>
+      <button type="submit" style="display: block; margin-left: auto; margin-right: auto;">
         Create dog
       </button>
+
+      
     </form>
   </div>
 </div>
