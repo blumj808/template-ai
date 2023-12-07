@@ -1,5 +1,9 @@
 <link rel="stylesheet" type="text/css" href="/styles.css">
 
+<% if flash[:alert] %>
+  <script>alert('<%= flash[:alert] %>');</script>
+<% end %>
+
 <style>
   .centered-form {
     text-align: center;
@@ -53,10 +57,9 @@ Connecting you to shelters with animals in need
     <div>
       <button type="submit">Login</button>
     </div>
-
-    <button type = <a href="/sign_up" class="btn">Sign Up</a></button>
   </form>
-</div>
+ <a href="/sign_up" class="btn">Sign Up</a>
+  </div>
 <% end %>
 
 <td>

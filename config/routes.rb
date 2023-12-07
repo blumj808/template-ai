@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get("/", { :controller => "home", :action => "home" })
 
+  post("/users", { :controller => "users", :action => "create" })
+
   # Routes for the Owner resource:
 
   post("/login", { :controller => "sessions", :action => "create" })
@@ -70,6 +72,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get 'sign_up', to: 'users#new', as: :sign_up
-  post 'users', to: 'users#create'
+  get('/sign_up', { :controller => "users", :action => "new" })
+
 end

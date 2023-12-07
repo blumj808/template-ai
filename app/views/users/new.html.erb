@@ -1,0 +1,51 @@
+<!-- app/views/users/new.html.erb -->
+<h1>Sign Up</h1>
+
+<%= form_with model: @user, url: '/users', local: true do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username, id: :user_username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password, id: :user_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Sign Up" %>
+  </div>
+<% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const signUpForm = document.querySelector('form');
+    
+    signUpForm.addEventListener('submit', function(event) {
+      const username = document.getElementById('user_username').value;
+      const password = document.getElementById('user_password').value;
+      const passwordConfirmation = document.getElementById('user_password_confirmation').value;
+      
+      if (!username || !password || !passwordConfirmation) {
+        event.preventDefault(); // Stop the form from submitting
+        alert('Please fill out all fields.');
+      }
+    });
+  });
+</script>

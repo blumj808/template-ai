@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new({ :username => params[:user]['username'], :password => params[:user]['password'], :password_confirmation => params[:user]['password_confirmation'] })
     if @user.save
       session.store(:user_id, @user.id)
-      redirect_to root_path, notice: "Account created successfully!"
+      redirect_to("/",notice: "Account created successfully!")
     else
       render :new
     end
