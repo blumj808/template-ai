@@ -1,12 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/styles.css">
 
-<div>
-  <div>
-    <h1>
-      <%= @the_shelter.name %>'s Info
-    </h1>
-
-    <div>
+ <div>
       <div>
         <a href="/shelters">
           Go back
@@ -20,63 +14,64 @@
       </div>
     </div>
 
-    <dl>
-      <dt>
-        Name
-      </dt>
-      <dd>
-        <%= @the_shelter.name %>
-      </dd>
+<div>
+  <div>
+    <h1>
+      <%= @the_shelter.name %>'s Info
+    </h1>
 
-      <dt>
-        City
-      </dt>
-      <dd>
-        <%= @the_shelter.city %>
-      </dd>
+   
 
-      <dt>
-        State
-      </dt>
-      <dd>
-        <%= @the_shelter.state %>
-      </dd>
-
-      <dt>
-        Description
-      </dt>
-      <dd>
-        <%= @the_shelter.description %>
-      </dd>
-
-
-      <dd>
+ <dd>
        <img src="/images/<%= ERB::Util.url_encode(@the_shelter.image) %>">
       </dd>
 
-      <dt>
-        Dogs count
-      </dt>
-      <dd>
-        <%= @the_shelter.dogs_count %>
+
+
+
+    <dd>
+       <h3 style="text-align: center;">
+        Name: <%= @the_shelter.name %>
       </dd>
 
-      <dt>
-        Created at
-      </dt>
+     
       <dd>
-        <%= time_ago_in_words(@the_shelter.created_at) %> ago
+        <h3 style="text-align: center;">
+        City: <%= @the_shelter.city %>
       </dd>
 
-      <dt>
-        Updated at
-      </dt>
       <dd>
-        <%= time_ago_in_words(@the_shelter.updated_at) %> ago
+        <h3 style="text-align: center;">
+        State: <%= @the_shelter.state %>
+      </dd>
+
+      <dd>
+        <h3 style="text-align: center;">
+        Description: <%= @the_shelter.description %>
+      </dd>
+
+      <dd>
+        <h3 style="text-align: center;">
+        Dogs count: <%= @the_shelter.dogs_count %>
+      </dd>
+
+      <dd>
+        <h3 style="text-align: center;">
+        Created at: <%= time_ago_in_words(@the_shelter.created_at) %> ago
+      </dd>
+
+    
+      <dd>
+        <h3 style="text-align: center;">
+        Updated at: <%= time_ago_in_words(@the_shelter.updated_at) %> ago
       </dd>
 
       <div>
-  <h2>Dogs at this shelter</h2>
+
+      <br>
+  <h1 style="text-align: center;">
+  Dogs at this shelter
+  
   <ul>
     <% @list_of_dogs.each do |dog| %>
       <li>
@@ -95,6 +90,7 @@
 
 
 <div>
+<% if current_user && current_user.role == "admin" %>
   <div>
     <h2>
       Edit shelter
@@ -165,3 +161,4 @@
 </div>
 
 <hr>
+<% end %>
