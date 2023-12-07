@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def not_found
+    render({ :template => "errors/not_found", :status => 404 })
+  end
+  
   def current_user
     @current_user ||= User.find(session.fetch('user_id')) if session.key?('user_id')
   end

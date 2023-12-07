@@ -15,11 +15,16 @@ class DogsController < ApplicationController
 
     @the_dog = matching_dogs.at(0)
 
+    if @the_dog.nil?
+      render({ :template => "errors/not_found", :status => 404 })
+    else
+
     matching_shelters = Shelter.where({ :id => @the_dog.shelter_id })
     @the_shelter = matching_shelters.at(0)
 
     render({ :template => "dogs/show" })
   end
+end
 
   def create
     the_dog = Dog.new

@@ -74,4 +74,7 @@ Rails.application.routes.draw do
 
   get('/sign_up', { :controller => "users", :action => "new" })
 
+   # Catch-all route for page not found (404)
+   match "*path", :to => "application#not_found", :via => :all
+
 end
