@@ -13,12 +13,17 @@ class SheltersController < ApplicationController
     matching_shelters = Shelter.where({ :id => the_id })
   
     @the_shelter = matching_shelters.at(0)
+
+    if @the_shelter.nil?
+      render({ :template => "errors/not_found", :status => 404 })
+    else
   
     # Get all dogs associated with this shelter
     @list_of_dogs = @the_shelter.dogs.order({ :created_at => :desc })
   
     render({ :template => "shelters/show" })
   end
+end
 
   def create
     the_shelter = Shelter.new
