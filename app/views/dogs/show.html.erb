@@ -138,15 +138,56 @@
     }
 
     if (allFilled) {
+      var tableBody = document.getElementById('submission-table').querySelector('tbody');
+      var newRow = document.createElement('tr');
+
+      inputs.forEach(function(input) {
+        var newCell = document.createElement('td');
+        newCell.textContent = input.value;
+        newRow.appendChild(newCell);
+      });
+
+      tableBody.appendChild(newRow);
+
       document.getElementById('adoption-form-container').style.display = 'none';
       document.getElementById('submission-message').style.display = 'block';
-      // Here you would normally handle the form submission to the server
+
+      // Clear the form fields
+      inputs.forEach(function(input) {
+        input.value = '';
+      });
+
+      // Optionally, reset the display of the form and submission message after a delay
+      setTimeout(function() {
+        document.getElementById('adoption-form-container').style.display = 'block';
+        document.getElementById('submission-message').style.display = 'none';
+      }, 3000); // Adjust the time as needed
     }
   });
 </script>
 
 <hr>
 
+<div id="submission-table-container" style="text-align: center;">
+  <h3>Adoption Submissions</h3>
+  <table id="submission-table" style="width:100%; margin-top: 20px;">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Candidate Reason</th>
+        <th>Contact Preferences</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- The submitted form data will be appended here -->
+    </tbody>
+  </table>
+</div>
+
+<br>
 
 <div>
 <% if current_user && current_user.role == "admin" %>
