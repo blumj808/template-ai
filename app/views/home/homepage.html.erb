@@ -3,16 +3,19 @@
 <style>
   .centered-form {
     text-align: center;
+    margin-top: 20px;
   }
-  .centered-form input {
+  .form-input {
     width: 200px; /* Adjust as needed */
-    margin-bottom: 10px;
+    height: 20px; /* Adjust as needed */
+    margin-bottom: 10px; /* Space below each input field */
   }
   .centered-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Space below each label */
   }
   .centered-form button {
+    width: 200px;
     display: block;
     margin: 10px auto; /* Center the button horizontally */
   }
@@ -37,20 +40,21 @@ Connecting you to shelters with animals in need
 <% else %>
   <!-- Display the login form if the user is not logged in -->
 
-  <div class="centered-form">
+ <div class="centered-form">
   <form action="/login" method="post">
     <div>
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
+      <input type="text" id="username" name="username" required style="width: 200px; height: 20px;">
     </div>
     <div>
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="password" name="password" required style="width: 200px; height: 20px;">
     </div>
     <div>
       <button type="submit">Login</button>
     </div>
   </form>
+</div>
 <% end %>
 
 <td>
