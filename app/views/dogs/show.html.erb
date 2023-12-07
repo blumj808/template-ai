@@ -22,12 +22,12 @@
 
 <div>
   <div>
-    <h1>
+    <h1 style="text-align: center;">
       About <%= @the_dog.name %>
     </h1>
 
   <dd>
-       <img src="/images/<%= @the_dog.name.gsub(' ', '_') %>.jpg" alt="<%= @the_dog.name %>">
+       <img src="/images/<%= @the_dog.name.gsub(' ', '_') %>.jpg" alt="<%= @the_dog.name %>"style="width: 300px; height: auto;"
       </dd>
 
     <div>
@@ -35,45 +35,33 @@
 
     <dl>
      
-      <dt>
-        Breed
-      </dt>
-      <dd>
-        <%= @the_dog.breed %>
-      </dd>
+      
+    <dd style="text-align: center;">
+  <%= @the_dog.breed %>
+</dd>
 
-      <dt>
-        Age
-      </dt>
-      <dd>
+     <br>
+       <dd style="text-align: center;">
         <%= @the_dog.age %>
       </dd>
 
-      <dt>
-        Bio
-      </dt>
-      <dd>
+   <br>
+       <dd style="text-align: center;">
         <%= @the_dog.bio %>
       </dd>
 
-      <dt>
-        Shelter
-      </dt>
-      <dd>
+    <br>
+      <dd style="text-align: center;">
        <a href="/shelters/<%= @the_shelter.id %>"><%= @the_shelter.name %></a>
       </dd>
 
-      <dt>
-        Gender
-      </dt>
-      <dd>
+     <br>
+       <dd style="text-align: center;">
         <%= @the_dog.gender %>
       </dd>
 
-      <dt>
-        Status
-      </dt>
-      <dd>
+      <br>
+       <dd style="text-align: center;">
         <%= @the_dog.status %>
       </dd>
 
@@ -95,7 +83,8 @@
 </div>
 
 <div id="adoption-form-container">
-  <h2>Are you interested in adopting <%= @the_dog.name %>? </h2>
+  <h2 style="text-align: center;">Are you interested in adopting <%= @the_dog.name %>?</h2>
+</div>
 
   <form id="adoption-form">
     <div>
